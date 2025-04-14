@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "58766128737",
+    "project_id": "budapest-app-szte",
+    "storage_bucket": "budapest-app-szte.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58766128737:android:d5df086f75e98f298b9c20",
+        "android_client_info": {
+          "package_name": "com.example.budapestapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfgjjA11_ngWkXn5u8H3SsF4jc7V5nqh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
