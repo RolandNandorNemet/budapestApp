@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/editLineNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Járatszám (pl. 7, M3)" />
+
+    <EditText
+        android:id="@+id/editType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Típus (pl. busz, metró)" />
+
+    <EditText
+        android:id="@+id/editDeparture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kiinduló állomás" />
+
+    <EditText
+        android:id="@+id/editDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Végállomás" />
+
+    <EditText
+        android:id="@+id/editDepartureTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Indulási idő" />
+
+    <EditText
+        android:id="@+id/editArrivalTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Érkezési idő" />
+</LinearLayout>

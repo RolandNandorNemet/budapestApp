@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "58766128737",
+    "firebase_url": "https://budapest-app-szte-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "budapest-app-szte",
     "storage_bucket": "budapest-app-szte.firebasestorage.app"
   },

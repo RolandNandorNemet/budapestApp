@@ -18,10 +18,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
-    // Firebase Auth instance
     private FirebaseAuth mAuth;
 
-    // UI elemek
     private EditText emailEditText, passwordEditText;
     private Button loginButton;
 
@@ -36,42 +34,35 @@ public class LoginActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Firebase Authentication inicializálása
         mAuth = FirebaseAuth.getInstance();
 
-        // UI elemek összekapcsolása a layout elemeivel
         emailEditText = findViewById(R.id.emailEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         loginButton = findViewById(R.id.loginButton);
 
-        // Bejelentkezés gomb eseménykezelése
         loginButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                // Adatok kiolvasása az EditText-ekből
+
                 String email = emailEditText.getText().toString().trim();
                 String password = passwordEditText.getText().toString().trim();
 
-                // Egyszerű ellenőrzés: minden mező ki van-e töltve
                 if(email.isEmpty() || password.isEmpty()){
                     Toast.makeText(LoginActivity.this, "Kérjük, töltsd ki az összes mezőt!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                // Firebase bejelentkezési metódus hívása
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(LoginActivity.this, task -> {
                             if(task.isSuccessful()){
-                                // Ha sikeres a bejelentkezés, megkapjuk a FirebaseUser-t
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 Toast.makeText(LoginActivity.this, "Sikeres bejelentkezés!", Toast.LENGTH_SHORT).show();
 
-                                // Átnavigálunk a MainActivity-re (vagy a megfelelő képernyőre)
                                 Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
                                 startActivity(intent);
+                                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                                 finish();
                             } else {
-                                // Hiba esetén megjelenítjük a hibaüzenetet
                                 Toast.makeText(LoginActivity.this, "Bejelentkezés sikertelen: "
                                         + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }

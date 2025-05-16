@@ -29,18 +29,14 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Gombok azonosítása
         loginButton = findViewById(R.id.loginButton);
         registerButton = findViewById(R.id.registerButton);
 
-        // Load bounce animation
         Animation bounceAnimation = AnimationUtils.loadAnimation(this, R.anim.bounce);
 
-        // Bejelentkezés gomb kezelése
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Start bounce animation for login button
                 loginButton.startAnimation(bounceAnimation);
 
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
@@ -48,11 +44,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Regisztráció gomb kezelése
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Start bounce animation for register button
                 registerButton.startAnimation(bounceAnimation);
 
                 Intent intent = new Intent(MainActivity.this, RegisterActivity.class);

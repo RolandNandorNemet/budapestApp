@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         tools:context=".RegisterActivity">
 
-        <!-- Registration Title -->
         <TextView
             android:id="@+id/registerTitle"
             android:layout_width="wrap_content"
@@ -26,7 +25,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="60dp" />
 
-        <!-- Email input -->
         <EditText
             android:id="@+id/emailEditText"
             android:layout_width="0dp"
@@ -40,7 +38,6 @@
             android:layout_marginEnd="32dp"
             android:layout_marginTop="40dp" />
 
-        <!-- Password input -->
         <EditText
             android:id="@+id/passwordEditText"
             android:layout_width="0dp"
@@ -54,7 +51,6 @@
             android:layout_marginEnd="32dp"
             android:layout_marginTop="16dp" />
 
-        <!-- Confirm Password input -->
         <EditText
             android:id="@+id/confirmPasswordEditText"
             android:layout_width="0dp"
@@ -68,7 +64,6 @@
             android:layout_marginEnd="32dp"
             android:layout_marginTop="16dp" />
 
-        <!-- Register button -->
         <Button
             android:id="@+id/registerButton"
             android:layout_width="0dp"
@@ -81,7 +76,6 @@
             android:layout_marginEnd="32dp"
             android:layout_marginTop="24dp" />
 
-        <!-- Link to login -->
         <TextView
             android:id="@+id/loginLinkTextView"
             android:layout_width="wrap_content"
